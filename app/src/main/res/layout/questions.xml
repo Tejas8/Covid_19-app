@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginLeft="30dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:alpha="0.6"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:text="#staysafe #selfcheckup"
+
+            ></TextView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_corona"
+            android:layout_gravity="right"
+            android:alpha="0.2"
+            android:layout_marginRight="-40dp"
+            android:layout_marginTop="-40dp"></ImageView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:weightSum="2"
+
+     >
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="2">
+     <TextView
+         android:layout_marginRight="20dp"
+         android:id="@+id/questions1"
+         android:layout_marginLeft="20dp"
+         android:fontFamily="@font/montserrat"
+         android:textColor="@color/colorPrimaryDark"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20sp"
+         android:gravity="left"
+         android:text="Do you have any pre-existing health conditions Asthma, Lung Disorders, Diabetes, and Heart Diseases?"></TextView>
+ </LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

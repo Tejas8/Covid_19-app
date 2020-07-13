@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".selfcheckup"
+    android:orientation="vertical"
+    android:weightSum="4"
+    xmlns:swipedeck="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1.2"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical"
+    >
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:src="@drawable/ic_arrow_back_black_24dp">
+
+    </ImageView></androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <TextView
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Self Check Up Covid-19"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"></TextView>
+    <TextView
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Questions"
+        android:textSize="40sp"
+        android:textColor="@android:color/white"></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6">
+            <com.personal.covid_19.CustomProgressBar
+                android:id="@+id/progressbarques"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+
+                app:borderWidth="1dp"
+                app:progressRadius="3dp"
+                app:progress="1"
+                app:max="5"
+
+                app:isShowDesc="false"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/questionno"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="20sp"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"></TextView>
+            <TextView
+                android:fontFamily="@font/montserrat"
+                android:textColor="@android:color/white"
+
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/5"></TextView>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.2"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp">
+
+
+        <com.daprlabs.cardstack.SwipeDeck
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="20dp"
+            swipedeck:card_spacing="10dp"
+            swipedeck:max_visible="3"
+            swipedeck:render_above="true"
+            swipedeck:rotation_degrees="10"
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".6"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            >
+            <Button
+                android:shadowColor="@android:color/darker_gray"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/buttonbackyes"
+
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:id="@+id/yesbtn"
+                android:text="yes"></Button>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            >
+            <Button
+                android:id="@+id/nobtn"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/buttonbackno"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+
+                android:text="No"
+                android:layout_marginRight="20dp"></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
